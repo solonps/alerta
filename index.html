@@ -13,23 +13,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Nome e Veículo</title>
+    <title>Alerta Caminhão Roubado</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Cadastro de Nome e Veículo</h1>
-        <form id="cadastroForm">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+        <h1>Alerta Caminhão Roubado</h1>
+        <button id="reportBtn">Reportar Roubo</button>
+
+        <form id="reportForm" class="hidden">
+            <label for="vehicle">Veículo:</label>
+            <input type="text" id="vehicle" name="vehicle" required>
             
-            <label for="veiculo">Veículo:</label>
-            <input type="text" id="veiculo" name="veiculo" required>
+            <label for="plate">Placa:</label>
+            <input type="text" id="plate" name="plate" required>
             
-            <button type="submit">Cadastrar</button>
+            <label for="location">Local do Roubo:</label>
+            <input type="text" id="location" name="location" required>
+            
+            <button type="button" id="submitBtn">Enviar Alerta</button>
         </form>
-        <div id="resultado"></div>
+
+        <canvas id="canvas" class="hidden"></canvas>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
